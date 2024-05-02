@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tiny-creepers",
+	"version": "${version}",
+	"name": "Tiny Creepers",
+	"description": "This mod adds tiny little creepers to the game!",
+	"authors": [
+		"Sven Tomasek"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tiny-creepers/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"sventomasek.tinycreepers.TinyCreepers"
+		],
+		"client": [
+			"sventomasek.tinycreepers.TinyCreepersClient"
+		],
+		"fabric-datagen": [
+			"sventomasek.tinycreepers.TinyCreepersDataGenerator"
+		]
+	},
+	"mixins": [
+		"tiny-creepers.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
