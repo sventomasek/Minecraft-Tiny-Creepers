@@ -8,10 +8,9 @@
 		"Sven Tomasek"
 	],
 	"contact": {
-		"source": "https://github.com/sventomasek/Minecraft-Tiny-Creepers",
-		"modrinth": "https://modrinth.com/mod/tiny-creepers",
-		"discord": "https://discord.gg/2wrDarTS3j",
-		"youtube": "https://www.youtube.com/channel/UCVvkRI4Yv6KQXgrB6yX7oVg"
+		"homepage": "https://github.com/sventomasek/Minecraft-Tiny-Creepers",
+		"sources": "https://github.com/sventomasek/Minecraft-Tiny-Creepers",
+		"issues": "https://github.com/sventomasek/Minecraft-Tiny-Creepers/issues"
 	},
 	"license": "ARR",
 	"icon": "assets/tiny-creepers/icon.png",
@@ -26,6 +25,17 @@
 		"fabric-datagen": [
 			"sventomasek.tinycreepers.TinyCreepersDataGenerator"
 		]
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.modrinth": "https://modrinth.com/mod/tiny-creepers",
+				"modmenu.discord": "https://discord.gg/2wrDarTS3j",
+				"modmenu.github_releases": "https://github.com/sventomasek/Minecraft-Tiny-Creepers/releases",
+				"modmenu.kofi": "https://ko-fi.com/sventomasek/donate",
+				"modmenu.youtube": "https://www.youtube.com/channel/UCVvkRI4Yv6KQXgrB6yX7oVg"
+			}
+		}
 	},
 	"mixins": [
 		"tiny-creepers.mixins.json"
