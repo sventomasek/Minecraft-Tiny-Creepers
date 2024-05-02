@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sventomasek.tinycreepers.entity.ModEntities;
 import sventomasek.tinycreepers.entity.custom.TinyCreeperEntity;
+import sventomasek.tinycreepers.world.gen.ModWorldGeneration;
 
 public class TinyCreepers implements ModInitializer {
 	public static final String MOD_ID = "tiny-creepers";
@@ -15,6 +16,7 @@ public class TinyCreepers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModEntities.registerModEntities();
+		ModWorldGeneration.generateModWorldGen();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.TINYCREEPER, TinyCreeperEntity.createTinyCreeperAttributes());
 	}

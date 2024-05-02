@@ -12,7 +12,7 @@ public class TinyCreeperRenderer extends MobEntityRenderer<TinyCreeperEntity, Ti
     private static final Identifier TEXTURE = new Identifier(TinyCreepers.MOD_ID, "textures/entity/tinycreeper.png");
 
     public TinyCreeperRenderer(EntityRendererFactory.Context context) {
-        super(context, new TinyCreeperModel<>(context.getPart(ModModelLayers.TINYCREEPER)), 0.6f);
+        super(context, new TinyCreeperModel<>(context.getPart(ModModelLayers.TINYCREEPER)), 0.4f);
     }
 
     @Override
