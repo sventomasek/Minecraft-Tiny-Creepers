@@ -11,16 +11,12 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.OcelotEntity;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import sventomasek.tinycreepers.entity.ModEntities;
 
 public class TinyCreeperEntity extends HostileEntity {
     public final AnimationState idlingAnimationState = new AnimationState();
@@ -62,7 +58,7 @@ public class TinyCreeperEntity extends HostileEntity {
                         Math.pow(player.getZ() - getZ(), 2)
                 );
 
-                if (distance < 1.0) {
+                if (distance < 1.0 && !player.isInCreativeMode()) {
                     this.explode();
                 }
             }
@@ -93,7 +89,7 @@ public class TinyCreeperEntity extends HostileEntity {
     public static DefaultAttributeContainer.Builder createTinyCreeperAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 6)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 0);
     }
 

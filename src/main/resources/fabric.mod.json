@@ -3,15 +3,17 @@
 	"id": "tiny-creepers",
 	"version": "${version}",
 	"name": "Tiny Creepers",
-	"description": "This mod adds tiny little creepers to the game!",
+	"description": "This mod adds tiny little Creepers to the game!",
 	"authors": [
 		"Sven Tomasek"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"source": "https://github.com/sventomasek/Minecraft-Tiny-Creepers",
+		"modrinth": "https://modrinth.com/mod/tiny-creepers",
+		"discord": "https://discord.gg/2wrDarTS3j",
+		"youtube": "https://www.youtube.com/channel/UCVvkRI4Yv6KQXgrB6yX7oVg"
 	},
-	"license": "MIT",
+	"license": "ARR",
 	"icon": "assets/tiny-creepers/icon.png",
 	"environment": "*",
 	"entrypoints": {
