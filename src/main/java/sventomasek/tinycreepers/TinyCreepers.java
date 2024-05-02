@@ -2,8 +2,11 @@ package sventomasek.tinycreepers;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sventomasek.tinycreepers.entity.ModEntities;
+import sventomasek.tinycreepers.entity.custom.TinyCreeperEntity;
 
 public class TinyCreepers implements ModInitializer {
 	public static final String MOD_ID = "tiny-creepers";
@@ -11,6 +14,8 @@ public class TinyCreepers implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModEntities.registerModEntities();
+
+		FabricDefaultAttributeRegistry.register(ModEntities.TINYCREEPER, TinyCreeperEntity.createTinyCreeperAttributes());
 	}
 }
