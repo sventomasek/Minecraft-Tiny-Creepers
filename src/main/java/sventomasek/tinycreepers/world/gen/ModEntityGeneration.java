@@ -15,7 +15,7 @@ public class ModEntityGeneration {
         BiomeModifications.addSpawn(
                 BiomeSelectors.excludeByKey(BiomeKeys.MUSHROOM_FIELDS, BiomeKeys.DEEP_DARK),
                 SpawnGroup.MONSTER,
-                ModEntities.TINYCREEPER, 15, 1, 2
+                ModEntities.TINYCREEPER, 35, 1, 2
         );
 
         SpawnRestriction.register(ModEntities.TINYCREEPER, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnInDark);

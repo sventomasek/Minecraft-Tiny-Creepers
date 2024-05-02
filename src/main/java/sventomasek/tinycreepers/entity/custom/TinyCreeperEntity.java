@@ -114,4 +114,13 @@ public class TinyCreeperEntity extends HostileEntity {
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_CREEPER_DEATH;
     }
+
+    @Override
+    public void onDeath(DamageSource damageSource) {
+        super.onDeath(damageSource);
+        if (!this.getWorld().isClient) {
+            int dropAmount = 1 + random.nextInt(3);
+            this.dropItem(Items.GUNPOWDER, dropAmount);
+        }
+    }
 }
